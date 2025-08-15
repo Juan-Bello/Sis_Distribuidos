@@ -1,0 +1,22 @@
+comprobar que la multiplicacion sea correcta
+hacer que el tipo de dato sea double
+comprobar que el makefile funcione
+documentar todo el codigo
+diseñar un experimento con 12 diferentes valores (tamaño de matris) 1, 2, 4, 8, 16 y max hilos, cada uno con 30 iteraciones
+automatizar la recoleccion de datos entre 200 y 20000
+
+
+
+
+
+
+
+
+
+
+
+
+
+top
+press 1: ver procesos por nucleo
+press i: ver los procesos importantes
