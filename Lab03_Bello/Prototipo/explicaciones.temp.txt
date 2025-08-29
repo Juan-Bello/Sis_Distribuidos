@@ -1,0 +1,31 @@
+¿Qué es rmic y por qué podría no estar?
+
+rmic es una herramienta antigua usada para generar stubs en aplicaciones RMI previas a Java 1.5. A partir de Java 5, ya no es necesario usar rmic, porque los stubs se generan dinámicamente en tiempo de ejecución.
+
+✅ Soluciones posibles (elige una según tu entorno)
+🔸 Opción 1: Omitir rmic (recomendado si usas Java 5 o superior)
+
+Si estás usando Java 5 o superior (cualquier versión moderna, incluyendo Java 8, 11, 17, 21, etc.), entonces puedes simplemente omitir el paso del rmic.
+
+El stub se genera automáticamente en tiempo de ejecución gracias a la clase java.rmi.server.UnicastRemoteObject.
+
+
+
+
+Los mensajes como:
+
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by SumadorServer
+...
+
+son solo advertencias de que estás usando una función (System.setSecurityManager(...)) que ha sido marcada como obsoleta (deprecated) y será eliminada en futuras versiones de Java (posiblemente en Java 18+).
+
+Pero mientras sigas en una versión que aún la incluye (como Java 11 o incluso Java 17), no hay problema. Puedes ignorar esas advertencias para fines académicos o de laboratorio.
+
+
+La línea clave que indica que todo está funcionando es esta:
+
+Rebind objeto MiSumador
+
+Eso significa que tu objeto remoto SumadorImpl fue registrado correctamente en el rmiregistry.
+
