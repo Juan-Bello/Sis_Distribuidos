@@ -76,7 +76,7 @@ make clean
 ## Configuración
 
 - **Puerto del servidor**: 8888 (configurable en el Makefile)
-- **Dirección del servidor**: 127.0.0.1 (localhost) ,este se puede cambiar dentro del TCPClient.java
+- **Dirección del servidor**: 127.0.0.1 (localhost), este se puede cambiar por la direccion ip del servidor dentro de TCPClient.java
 
 ## Arquitectura
 
