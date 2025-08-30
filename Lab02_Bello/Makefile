@@ -1,6 +1,6 @@
 #**************************************************************
 #         		Pontificia Universidad Javeriana
-#     Autor: Juan Esteban Bello Durango
+#     Autor: Juan Bello, Kevin Garay, Arley Bernal
 #     Fecha: 28 de Agosto 2025
 #     Materia: Sistemas Distribuidos
 #****************************************************************/
