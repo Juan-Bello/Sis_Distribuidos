@@ -1,3 +1,10 @@
+#**************************************************************
+#                         Pontificia Universidad Javeriana
+#     Autor: Juan Bello, Kevin Garay, Arley Bernal
+#     Fecha: 4 de Septiembre 2025
+#     Materia: Sistemas Distribuidos
+#****************************************************************/
+
 import java.rmi.*;
 
 // Cliente para el servicio Sumador
