@@ -4,18 +4,22 @@
 #     Fecha: 11 de Septiembre 2025
 #     Materia: Sistemas Distribuidos
 #**************************************************************/
-import java.net.*;
+
+import java.net.*;                                             // Libreria de red (Socket, ServerSocket, DatagramSocket, InetAddress, ...)
 import java.io.*;
+
+// Clase principal del servidor UDP
 public class socketudpser {
    public static void main(String argv[]) {
       System.out.println("Prueba de sockets UDP (servidor)");
       DatagramSocket socket;
       boolean fin = false;
 
+      // Setup de socket del servidor UDP
       try {
 
          System.out.print("Creando socket... ");
-         socket = new DatagramSocket(6000);
+         socket = new DatagramSocket(6000);              // Puerto habilitado
          System.out.println("ok");
 
          System.out.println("Recibiendo mensajes... ");
@@ -35,3 +39,4 @@ public class socketudpser {
       }
    }
 }
+

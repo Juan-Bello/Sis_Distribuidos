@@ -4,16 +4,20 @@
 #     Fecha: 11 de Septiembre 2025
 #     Materia: Sistemas Distribuidos
 #**************************************************************/
-import java.net.*;
+
+import java.net.*;                                             // Libreria de red (Socket, ServerSocket, DatagramSocket, InetAddress, ...)
 import java.io.*;
+
+// Clase principal: servidor TCP
 public class sockettcpser {
    public static void main(String argv[]) {
       System.out.println("Prueba de sockets TCP (servidor)");
       ServerSocket socket;
       boolean fin = false;
 
+      // Setup de socket del servidor TCP
       try {
-         socket = new ServerSocket(6001);
+         socket = new ServerSocket(6001);          // Puerto habilitado
          Socket socket_cli = socket.accept();
          DataInputStream in =
             new DataInputStream(socket_cli.getInputStream());

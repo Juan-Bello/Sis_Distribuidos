@@ -4,8 +4,11 @@
 #     Fecha: 11 de Septiembre 2025
 #     Materia: Sistemas Distribuidos
 #**************************************************************/
-import java.net.*;
+
+import java.net.*;                     // Libreria de red (Socket, ServerSocket, DatagramSocket, InetAddress, ...)
 import java.io.*;
+
+// Clase principal del cliente UDP
 public class socketudpcli {
    public static void main(String argv[]) {
       if (argv.length == 0) {
@@ -23,12 +26,13 @@ public class socketudpcli {
       DatagramPacket paquete;
 
       mensaje_bytes=mensaje.getBytes();
+      // Conexion con el servidor especificado, direccion ip por argumento y puerto 6000
       try {
          System.out.print("Creando socket... ");
          socket = new DatagramSocket();
          System.out.println("ok");
 
-         System.out.print("Capturando direcci�n de host... ");
+         System.out.print("Capturando dirección de host... ");
          address=InetAddress.getByName(argv[0]);
          System.out.println("ok");
 
@@ -37,7 +41,7 @@ public class socketudpcli {
          do {
             mensaje = in.readLine();
             mensaje_bytes = mensaje.getBytes();
-            paquete = new DatagramPacket(mensaje_bytes,mensaje.length(),address,6000);
+            paquete = new DatagramPacket(mensaje_bytes,mensaje.length(),address,6000);                   // Puerto del servidor TCP
             socket.send(paquete);
          } while (!mensaje.startsWith("fin"));
       }
@@ -47,3 +51,9 @@ public class socketudpcli {
       }
    }
 }
+
+/*
+Notas finales:
+- UDP opera por datagramas: cada paquete es independiente.
+- El cliente puede enviar aun cuando no hay servidor; el paquete puede perderse sin notificación.
+*/
