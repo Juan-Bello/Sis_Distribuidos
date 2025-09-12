@@ -1,3 +1,10 @@
+#**************************************************************
+#                         Pontificia Universidad Javeriana
+#     Autor: Juan Bello, Kevin Garay, Arley Bernal
+#     Fecha: 11 de Septiembre 2025
+#     Materia: Sistemas Distribuidos
+#**************************************************************/
+
 # Makefile para compilar y ejecutar los ejemplos de sockets (TCP y UDP)
 JAVAC = javac
 JAVA  = java
@@ -30,4 +37,5 @@ run-udp-client: compile
 # Limpiar archivos .class
 clean:
 	@echo "Eliminando archivos .class..."
+
 	-@rm -f *.class
