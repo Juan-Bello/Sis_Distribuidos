@@ -1,7 +1,7 @@
 #/**************************************************************
 #                         Pontificia Universidad Javeriana
 #     Autor: Juan Bello, Kevin Garay, Arley Bernal
-#     Fecha: 30 de Septiembre 2025
+#     Fecha: 18 de Noviembre 2025
 #     Materia: Sistemas Distribuidos
 #**************************************************************/
 
@@ -38,11 +38,11 @@ run-GC:
 
 # Ejecutar Actor de Prestamos
 run-AP:
-	mvn exec:java -Dexec.mainClass=sd.library.ActorPrestamo -Dexec.args="$(IPGC) $(PORTSUB) $(IPGA) $(PORTGA) $(IPGC) $(PORTRA)"
+	mvn exec:java -Dexec.mainClass=sd.library.ActorPrestamo -Dexec.args="$(IPGC) $(PORTSUB) $(IPGA) $(PORTGA) $(IPGAS) $(PORTGAS) $(IPGC) $(PORTRA)"
 
 # Ejecura Actor de Renovaciones y Devoluciones
 run-AS:
-	mvn exec:java -Dexec.mainClass=sd.library.ActorSuscriptor -Dexec.args="$(IPGC) $(PORTSUB) $(IPGA) $(PORTGA) $(IPGC) $(PORTRA)"
+	mvn exec:java -Dexec.mainClass=sd.library.ActorSuscriptor -Dexec.args="$(IPGC) $(PORTSUB) $(IPGA) $(PORTGA) $(IPGAS) $(PORTGAS) $(IPGC) $(PORTRA)"
 	
 # Ejecutar el proceso cliente automatico
 run-PS:
